@@ -1,0 +1,35 @@
+# This is a data file to use as sample input to the Sorter application.
+#
+# Any lines that start with a # or / character will be ignored as well as any
+# empty or blank lines.
+
+Jane
+Mike
+Adam
+Samuel
+Jade
+Steve
+Zeke
+Mariah
+January
+Austin
+Blake
+Olivia
+Erin
+Nate
+Thomas
+Kate
+Jewel
+Evelyn
+Larry
+Jessica
+Stewart
+Dina
+Tracy
+Bobbie
+Lois
+Freddie
+Jeff
+Vanessa
+Xavier
+River
