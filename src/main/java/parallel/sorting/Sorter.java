@@ -19,7 +19,8 @@ public class Sorter {
   private static final int FILE_NOT_FOUND         = 2;
   private static final int SOURCE_FILE_READ_ERROR = 3;
 
-  private Sorter() {}
+  // Package-private scope for accessibility by unit test class
+  Sorter() {}
 
   /**
    * Just a stupid, simple method to simply read data from an external file and initialize the data set
@@ -30,7 +31,8 @@ public class Sorter {
    * @return a {@link List} of String data to be alphabetically sorted
    * @throws IOException when there's any kind of problem accessing or reading the specified data file
    */
-  private List<String> readValues(final String sourceFilename) throws IOException {
+  // Package-private scope for accessibility by unit test class
+  List<String> readValues(final String sourceFilename) throws IOException {
     try (BufferedReader inFile = new BufferedReader(new FileReader(sourceFilename))) {
       return inFile.lines()
           .map(String::trim)
@@ -84,5 +86,6 @@ public class Sorter {
         + "sorted");
   }
 
-  private static final Predicate<String> IS_VALID_LINE = s -> !s.isEmpty() && s.charAt(0) != '#' && s.charAt(0) != '/';
+  private static final Predicate<String> IS_VALID_LINE = s -> !s.isEmpty() && s.charAt(0) != '#'
+      && !s.substring(0, 2).equals("//");
 }

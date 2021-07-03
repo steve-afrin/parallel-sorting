@@ -1,0 +1,18 @@
+# This file is intended for use by the SorterTest test class.
+# Altering the contents of this file may cause the SorterTest unit tests to fail.
+
+// This is an alternative comment line.
+
+    // This is an indented alternative comment line.
+
+Data element 1
+    Data element 2
+
+    # Indented comment line should not appear in data to sort.
+
+# Data with trailing whitespace
+Data element 3
+
+Data element 4 # trailing comment included in data
+
+    Data element 5 // alternative tailing comment included in data
